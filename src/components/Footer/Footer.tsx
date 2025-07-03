@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 
 import { footerLinks, legalLinks } from "@constant/index";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -70,9 +71,9 @@ export default function Footer() {
             className="text-custom-grey mt-5 text-xs lg:mt-6 lg:text-sm"
           >
             By subscribing you agree to our{" "}
-            <a href="#" className="underline">
+            <Link href="#" className="underline">
               Privacy Policy
-            </a>{" "}
+            </Link>{" "}
             and provide consent to receive updates from our company.
           </motion.p>
         </div>
@@ -104,9 +105,9 @@ export default function Footer() {
                       duration: 0.5,
                     }}
                   >
-                    <a href="#" className="hover:underline">
+                    <Link href="#" className="hover:underline">
                       {link}
-                    </a>
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
@@ -129,13 +130,13 @@ export default function Footer() {
 
         <div className="flex space-x-4">
           {legalLinks.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-custom-black text-xs hover:underline lg:text-sm"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
       </motion.div>

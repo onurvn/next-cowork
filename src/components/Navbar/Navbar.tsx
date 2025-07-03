@@ -56,7 +56,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="text-custom-black text-sm font-medium lg:text-base"
             >
-              <a href={link.path}>{link.link}</a>
+              <Link href={link.path}>{link.link}</Link>
             </motion.li>
           ))}
         </ul>
@@ -136,7 +136,7 @@ export default function Navbar() {
                   onClick={() => setToggled(false)}
                   className="text-[48px] leading-[120%] font-bold text-white"
                 >
-                  <a href={link.path}>{link.link}</a>
+                  <Link href={link.path}>{link.link}</Link>
                 </motion.li>
               ))}
             </motion.ul>
