@@ -7,6 +7,7 @@ import insightSectionImage from "@assets/images/insightSectionImage.png";
 
 import { insightItems } from "@/constants";
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export default function InsightSection() {
   return (
@@ -101,12 +102,12 @@ export default function InsightSection() {
                 {card.title}
               </h3>
 
-              <a
-                href="#readMore"
+              <Link
+                href="#"
                 className="text-custom-black flex items-center gap-1 text-xs font-medium hover:underline lg:text-sm"
               >
                 Read more <ChevronRight className="h-3 w-3 lg:h-4 lg:w-4" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         ))}
